@@ -435,9 +435,32 @@ footer img{
   margin-top: 5px;
 }
 
+footer a{
+  text-decoration: none;
+  color: white
+}
+
+footer a:hover{
+  text-decoration: none;
+  color: white;
+  font-weight:bold
+}
+
+footer a:focus{
+  text-decoration: none;
+  color: white;
+  
+}
+
+
 .credits-fmm{
     vertical-align: bottom !important;
     color: #fff;
 }
 
 /* end Footer Styles */
+
+.list-vertical {
+  vertical-align: middle;
+}
+
