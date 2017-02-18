@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Beef-Tec - Tecnologia em Pecuária</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/beeftec.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,23 +43,25 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll hidden-md hidden-lg" id="titulo" href="#page-top">Beef-Tec</a>
+                <a class="navbar-brand page-scroll hidden-xs hidden-sm" id="titulo" href="#page-top">Beef-Tec - Tecnologia em Pecuária</a>
+
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Sobre</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Produtos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#portfolio">Consultoria</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -70,7 +72,8 @@
 
     <header>
         <div class="header-content">
-            <div class="header-content-inner">
+            <!-- Widgets Produtos Cepea - www.cepea.esalq.com.br/br/widget.aspx -->
+           <div class="header-content-inner">
                 <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
@@ -83,10 +86,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
+                    <h2 class="section-heading">Sobre a Beef-Tec!</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                    <p class="text-faded">A Beef-Tec é uma empresa de prestação de serviços direcionados para a pecuária de corte e desenvolvimento de soluções informatizadas para propriedades rurais, contando com veterinários agrônomos e zootecnistas com grande experiência de campo e em constante atualização profissional.</p>
+                    <a href="#contact" class="page-scroll btn btn-default btn-xl sr-button">Entre em contato!</a>
                 </div>
             </div>
         </div>
@@ -243,9 +246,9 @@
 
     <section id="contact">
         <div class="container">
-            <div class="row">
+            <h2 class="section-heading text-center">Entre em contato!</h2>
+            <div class="col-md-6">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
                     <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
                 </div>
@@ -258,8 +261,66 @@
                     <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
                 </div>
             </div>
+
+            <!-- formulario de contato -->
+            <div class="col-md-6">
+                <h3>Envie-nos uma mensagem</h3>
+                <form
+                    action="http://bi.beeftec.com.br/bi/plugin/sparkl?user=guest&password=guest"
+                    method="POST"
+                    target="no_blank" 
+                    class="well">
+                    <input type="hidden" name="formulario" value="Contato">
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Nome:</label>
+                            <input type="text" class="form-control" name="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Empresa:</label>
+                            <input type="text" class="form-control" name="company" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Telefone:</label>
+                            <input type="tel" class="form-control" name="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email:</label>
+                            <input type="email" class="form-control" name="_replyto" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Mensagem:</label>
+                            <textarea rows="7" cols="100" class="form-control" name="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div><!-- end formulario de contato -->
         </div>
     </section>
+
+    <footer>
+        <div class="col-lg-12">
+            <span class="credits-text footer-beeftec"></span>
+            <hr class="primary">
+            <a href="http://bovbi.com.br" target="_no_blank" title="Bov BI - Business Intelligence para seu Agronegócio" class="footer-bovbi"> 
+                <img src="img/bovbi_logo_small.png"  class="img-thumbnail">
+                Desenvolvido por Bov BI - Business Intelligence para seu Agronegócio
+            </a>
+        </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -273,7 +334,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/beeftec.js"></script>
 
 </body>
 

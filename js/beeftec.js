@@ -61,4 +61,8 @@
         }
     });
 
+
+    $('.credits-text').empty().text( (new Date()).getFullYear()+ ' © Beef-Tec - Tecnologia em Pecuária');
+
+
 })(jQuery); // End of use strict
