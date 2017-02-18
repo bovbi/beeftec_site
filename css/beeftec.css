@@ -77,7 +77,7 @@ aside {
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #eb3812;
+  color: #9D3835;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-weight: 700;
@@ -233,7 +233,7 @@ header .header-content .header-content-inner p {
   color: white;
   opacity: 0;
   display: block;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(157, 56, 53, 0.9);
   position: absolute;
   bottom: 0;
   text-align: center;
