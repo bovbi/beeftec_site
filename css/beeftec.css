@@ -193,16 +193,22 @@ header .header-content .header-content-inner p {
     transform: translateY(-50%);
     padding: 0 50px;
   }
+
+  header .header-content img{
+    position: relative !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
   header .header-content .header-content-inner {
-    max-width: 1000px;
+    max-width: auto;
     margin-left: auto;
     margin-right: auto;
   }
   header .header-content .header-content-inner h1 {
-    font-size: 50px;
+    font-size: 70px;
   }
   header .header-content .header-content-inner p {
-    font-size: 18px;
+    font-size: 36px;
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
