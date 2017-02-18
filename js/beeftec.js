@@ -64,5 +64,14 @@
 
     $('.credits-text').empty().text( (new Date()).getFullYear()+ ' © Beef-Tec - Tecnologia em Pecuária');
 
+    //widget cepea
+    var widthCepea = $('#indicador-cepea').width();
+    var script = ('<script type="text/javascript" src="http://www.cepea.esalq.usp.br/br/widgetproduto.js.php?fonte=arial&tamanho=10&largura={{widthCepea}}px&corfundo=ffffff&cortexto=333333&corlinha=ede7bf&id_indicador%5B%5D=2&id_indicador%5B%5D=54&id_indicador%5B%5D=77&id_indicador%5B%5D=12&id_indicador%5B%5D=92"></script>').replace('{{widthCepea}}', widthCepea); 
+    postscribe('#indicador-cepea', script);
+
+     //widget noticias agricolas
+    var widthNoticias = $('#indicador-noticias-agricolas').width();
+    var script = ('<script type="text/javascript" src="http://www.noticiasagricolas.com.br/widget/cotacoes.js.php?id=160&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura={{widthNoticias}}px&cortexto=333333&corcabecalho=FFFFFF&corlinha=ede7bf&imagem=true&output=js"></script>').replace('{{widthNoticias}}', widthNoticias); 
+    postscribe('#indicador-noticias-agricolas', script);
 
 })(jQuery); // End of use strict
