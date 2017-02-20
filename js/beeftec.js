@@ -74,4 +74,76 @@
     var script = ('<script type="text/javascript" src="http://www.noticiasagricolas.com.br/widget/cotacoes.js.php?id=160&fonte=Arial%2C%20Helvetica%2C%20sans-serif&tamanho=10pt&largura={{widthNoticias}}px&cortexto=333333&corcabecalho=FFFFFF&corlinha=ede7bf&imagem=true&output=js"></script>').replace('{{widthNoticias}}', widthNoticias); 
     postscribe('#indicador-noticias-agricolas', script);
 
+
+     $("#formulario-contato").submit(function (event){
+
+        var handle200 = function(data, textStatus, jqXHR) {
+            $("#messageSuccess").show();
+        };
+
+        var handle201 = function(data, textStatus, jqXHR) {
+            $("#messageSuccess").show();
+        };
+
+        var handle404 = function(jqXHR, textStatus, errorThrown) {
+            $("#messageError").show();
+        };
+
+        $.ajax({
+            url:'http://data.bovbi.com.br/job/transf_site_send_email/buildWithParameters',
+            data: $("#formulario-contato").serialize()+'&ts='+ (new Date().getTime()),
+            method: 'GET',
+            headers: {'Authorization': 'Basic ' + btoa('admin:b2c974514f280902d4e4adddbb479c2f')}
+        }).done(function(data) {
+            
+            $("#messageSuccess").show();
+        }).fail(function() {
+            $("#messageError").show();
+            
+        });
+
+        event.preventDefault();
+    });
+
+  
+
 })(jQuery); // End of use strict
+
+//formulario
+function sendMessage(){
+
+    var handle200 = function(data, textStatus, jqXHR) {
+        $("#messageSuccess").show();
+    };
+
+    var handle201 = function(data, textStatus, jqXHR) {
+        $("#messageSuccess").show();
+    };
+
+    var handle404 = function(jqXHR, textStatus, errorThrown) {
+        $("#messageError").show();
+    };
+
+    $.ajax({
+        url:'http://data.bovbi.com.br/job/transf_site_send_email/buildWithParameters',
+        data: $("#formulario-contato").serialize()+'&ts='+ (new Date().getTime()),
+        method: 'GET',
+        headers: {'Authorization': 'Basic ' + btoa('admin:b2c974514f280902d4e4adddbb479c2f')}
+    }).done(function(data) {
+        
+        $("#messageSuccess").show();
+    }).fail(function() {
+        $("#messageError").show();
+        
+    });
+}
+
+function validacao(){
+    var status = true;
+
+    if($("#formulario-contato"))
+    return {
+        status : true,
+        fieldNameError : "Nome"
+    };
+}

@@ -470,3 +470,12 @@ footer a:focus{
   vertical-align: middle;
 }
 
+#messageError{
+  display: none;
+}
+#messageSuccess{
+  display: none;
+}
+
+.table-responsive {border: 2px solid;
+                   border-radius: 5px;}
