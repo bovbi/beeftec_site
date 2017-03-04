@@ -93,7 +93,7 @@
             url:'https://jenkins.bovbi.com.br:8080/job/transf_site_send_email/buildWithParameters',
             data: $("#formulario-contato").serialize()+'&ts='+ (new Date().getTime()),
             method: 'GET',
-            headers: {'Authorization': 'Basic ' + btoa('admin:b2c974514f280902d4e4adddbb479c2f')}
+            headers: {'Authorization': 'Basic ' + btoa('admin:10c67d579780c1b9ab4ee9c21acfb8fe')}
         }).done(function(data) {
             
             $("#messageSuccess").show();
@@ -108,35 +108,6 @@
   
 
 })(jQuery); // End of use strict
-
-//formulario
-function sendMessage(){
-
-    var handle200 = function(data, textStatus, jqXHR) {
-        $("#messageSuccess").show();
-    };
-
-    var handle201 = function(data, textStatus, jqXHR) {
-        $("#messageSuccess").show();
-    };
-
-    var handle404 = function(jqXHR, textStatus, errorThrown) {
-        $("#messageError").show();
-    };
-
-    $.ajax({
-        url:'https://jenkins.bovbi.com.br:8080/job/transf_site_send_email/buildWithParameters',
-        data: $("#formulario-contato").serialize()+'&ts='+ (new Date().getTime()),
-        method: 'GET',
-        headers: {'Authorization': 'Basic ' + btoa('admin:b2c974514f280902d4e4adddbb479c2f')}
-    }).done(function(data) {
-        
-        $("#messageSuccess").show();
-    }).fail(function() {
-        $("#messageError").show();
-        
-    });
-}
 
 function validacao(){
     var status = true;
