@@ -90,7 +90,7 @@
         };
 
         $.ajax({
-            url:'http://data.bovbi.com.br/job/transf_site_send_email/buildWithParameters',
+            url:'https://jenkins.bovbi.com.br:8080/job/transf_site_send_email/buildWithParameters',
             data: $("#formulario-contato").serialize()+'&ts='+ (new Date().getTime()),
             method: 'GET',
             headers: {'Authorization': 'Basic ' + btoa('admin:b2c974514f280902d4e4adddbb479c2f')}
